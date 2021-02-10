@@ -3,7 +3,7 @@
 # initialize arguments
 OPTIND=1 
 db=""
-workdir=$(PWD)
+workdir=$PWD
 
 while getopts "d:w:" opt; do
     case "$opt" in
@@ -26,8 +26,9 @@ fi
 
 echo "$db" > .env
 
-echo $(la)
 
-//cd "$workdir" || exit 1
+cd "$workdir" || exit 1
 
-//prisma migrate deploy --preview-feature
+ls -a
+
+#prisma migrate deploy --preview-feature
