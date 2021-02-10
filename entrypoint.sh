@@ -24,9 +24,8 @@ if [[ -z "$db" ]]; then
     exit 1
 fi
 
-echo "$db" > .env
-
-
 cd "$workdir" || exit 1
+
+echo "$db" > .env
 
 prisma migrate deploy --preview-feature
