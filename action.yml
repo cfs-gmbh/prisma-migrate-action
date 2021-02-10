@@ -1,0 +1,16 @@
+# action.yml
+name: 'MySQL branch'
+description: 'Clone MySQL database to get isolated development instances'
+inputs:
+  db:  
+    description: 'Database connection information formatted as database string'
+    required: true
+  workdir:  
+    description: 'The root directory of the project that uses prisma'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - -d ${{ inputs.db }}
+    - -w ${{ inputs.workdir }}
