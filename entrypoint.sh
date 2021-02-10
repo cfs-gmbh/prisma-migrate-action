@@ -29,6 +29,4 @@ echo "$db" > .env
 
 cd "$workdir" || exit 1
 
-ls -a
-
-#prisma migrate deploy --preview-feature
+prisma migrate deploy --preview-feature
